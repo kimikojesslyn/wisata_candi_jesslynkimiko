@@ -10,6 +10,7 @@ class DetailScreen extends StatelessWidget {
     return Scaffold(
       body: Column(
         children: [
+          // Detail Header
           Stack(
             children: [
               // Image utama
@@ -43,6 +44,27 @@ class DetailScreen extends StatelessWidget {
                 ),
               ),
             ],
+          ),
+
+          // Detail Info
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 16),
+            child: Column(
+              children: [
+                // Info atas (nama candi dan tombol favorit)
+                Row(
+                  children: [
+                    Text(candi.name),
+                    IconButton(
+                      onPressed: () {},
+                      icon: Icon(Icons.favorite_border),
+                    ),
+                  ],
+                ),
+                // Info tenga (lokasi, dibangun, tipe)
+                // Info bawah (deskripsi)
+              ],
+            ),
           ),
         ],
       ),
